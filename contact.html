@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ampel</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet"><!--Google Font Sansita Swashed -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+        <link rel="stylesheet" href="css/all.min.css"> <!--FontAwsome -->
+        <link rel="stylesheet" href="css/styles.css"> <!--CSS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><!--JQUERY-->
+</head>
+   
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="top-bar"> <!--Top header and Nav bar-->
+                <div class="logo"><a href="index.html">Ampel<i class="fab fa-pagelines i-pagelines"></i></a></div>
+                <button class="nav-button" id="nav-button"><span class="hamburger-icon">&#9776;</span><span class="sr-only">Menu</span></button>
+                <nav id="nav-items" class="nav-items">
+                    <ul>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <div class="banner"> <!--Banner Main Big Photo-->
+            <div class="pic">
+                    <img src="images/page-banners/contact-banner.png" alt="contact">
+            </div>
+            <div class="page-title">
+                <h1>Contact</h1>
+            </div> 
+        </div>
+    
+        <main>
+            <section class="main-section">
+                <div class="calender">
+                    <h1>営業カレンダー</h1>
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th id="prev">&laquo;</th>
+                                    <th id="title"colspan="5">2020/05</th>
+                                    <th id ="next">&raquo;</th>
+                                </tr>
+                                <tr>
+                                    <td>Sun</th>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td class="today">1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                    <td>1</td>
+                                </tr> -->
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td id="today" colspan="7">Today</td>
+                                </tr>
+                            </tfoot>
+                        </tbody>
+                    </table>
+                    <div class="calendar-shop-info">
+                        <br />
+                        <h2>Ampel</h2>
+        
+                        <p>〒357-0035</p>
+                        <p>埼玉県飯能市柳町23−20</p>
+                        <p>電話番号：070-4073-1105</p>
+                        <p>FAX:070-4073-1106</p>
+                        <br/>
+                        <p>営業時間/8:00〜16:00 (売り切れ次第終了)</p>
+                        <p>定休日/月・火</p>
+                    </div>
+
+                </div>
+                <hr />
+                <article class="shop" id="contact">
+                    <h1>メールでのお問い合わせ</h1>
+                    <div class= "email-shop-contents contents-wrapper">
+                       
+                        
+                        <div class="shop-contact-form">
+                            <!-- form -->
+                            <form  class="form-wrapper" id="my-form" 
+                            action="https://formspree.io/f/mqkgdrww" method="POST"
+                            >
+                                <div class="form-contents">
+                                    <fieldset>
+                                    
+                                        <div class="form-item">
+                                            <label for="name">お名前</label>
+                                            <input type = "text" id = "name" class="input-text" name="name">
+                                            <i class="fas fa-check-circle" style="color:rgb(76, 189, 76)"></i>
+                                            <i class="fas fa-exclamation-circle" style="color:rgb(221, 53, 53)"></i>
+                                            <small>Error message</small>
+                                        </div>
+                                        
+                                        <div class="form-item"> 
+                                            <label for ="phone">電話番号</i></label>
+                                            <input type = "textarea" id = "phone" class="input-text" name="phone">
+                                            <i class="fas fa-check-circle" style="color:rgb(76, 189, 76)"></i>
+                                            <i class="fas fa-exclamation-circle" style="color:rgb(221, 53, 53)"></i>
+                                            <small>Error message</small>
+                                        </div>
+                                        
+                                        <div class="form-item">
+                                            <label for = "email">メールアドレス</label>
+                                            <input type = "email" id = "email" class="input-text" name="_replyto">
+                                            <i class="fas fa-check-circle" style="color:rgb(76, 189, 76)"></i>
+                                            <i class="fas fa-exclamation-circle" style="color:rgb(221, 53, 53)"></i>
+                                            <small>Error message</small>
+                                        </div>
+                                        
+                                        <div class="form-item">
+                                            <label for="inquiry">お問合せ内容</label>
+                                            <textarea type = "textarea" id = "inquiry" class="text-area"  name="message" cols="30" rows="10"></textarea>
+                                            <i class="fas fa-check-circle" style="color:rgb(76, 189, 76)"></i>
+                                            <i class="fas fa-exclamation-circle" style="color:rgb(221, 53, 53)"></i>
+                                            <small>Error message</small>
+                                        </div>  
+                                        
+                                       
+                                            <button id="submit-btn" class="submit-btn" type="submit">送信 <i class="far fa-envelope"></i></button>
+                                       
+                                       
+                                        
+                                        <div class="return">
+                                            <p>受信後、通常2～3営業日内に返信いたします。</p>
+                                        </div>
+                                        
+                                    </fieldset>
+                                </div>
+                                
+                            </form>
+                        </div>
+                        <div id="status" ></div>
+
+                        <div class="btn-wrapper">
+                            <button class="btn-common"><a href="index.html"><i class="fas fa-arrow-left"></i> 戻る</a></button>
+                        </div>
+
+                        <!-- <div class= "shop-contents contents-wrapper">
+                            <div class="shop-info">
+                                <h2>Ampel</h2>
+                                <br/>
+                                <p>〒357-0035</p>
+                                <p>埼玉県飯能市柳町23−20</p>
+                                <p>電話番号：070-4073-1105</p>
+                                <p>FAX:070-4073-1106</p>
+                                <br/>
+                                <p>営業時間/8:00〜16:00 (売り切れ次第終了)</p>
+                                <p>定休日/月・火</p>
+                            </div>
+                            <div class="shop-img">
+                                <img src="images/shop/ampel-shop.PNG" alt="store image">
+                                
+                            </div>
+                        </div> -->
+                    </div>
+                </article>
+                    
+                <article  class="contact-g-map">
+                        
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.907222995816!2d139.31891941405095!3d35.851278428236995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6019264bb42f83e7%3A0xd5b31727f0f35f68!2z5pel5pys44CB44CSMzU3LTAwMzUg5Z-8546J55yM6aOv6IO95biC5p-z55S677yS77yT4oiS77yS77yQ!5e0!3m2!1sja!2sca!4v1606821462704!5m2!1sja!2sca" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </article>
+            </section>
+            <!-- <div class="btn-wrapper">
+                <button class="btn-common"><a href="index.html"><i class="fas fa-arrow-left"></i> 戻る</a></button>
+            </div> -->
+        </main>
+    
+        <footer> <!--Footer-->
+            <div class="logo">
+                <a href="index.html">Ampel<i class="fab fa-pagelines i-pagelines"></i></a>
+            </div>
+            
+            <div class="contact">
+               <div class="address">
+                    〒357-0035<br>
+                    埼玉県飯能市柳町23−20<br>
+                    <i class="fas fa-phone"></i> 070-4073-1105
+                </div>
+            </div>
+            <div class="i-icons">
+                <!-- SNS Icons -->
+                <a href="#0"><i class="fab fa-facebook" style="color:white;"></i></a>
+                <a href="#0"><i class="fab fa-twitter" style="color:white;"></i></a>
+                <a href="#0"><i class="fab fa-instagram" style="color:white;"></i></a>
+            </div>
+            <div class="copy-right">
+                <p>&copy; Ampel All right reserved.</p>
+            </div>
+        </footer> <!--Footer ends here -->
+        
+    </div><!-- wrapper -->
+    <script src="./scripts/scripts.js"></script>   
+    <script src="./scripts/slide-scripts.js"></script>  
+    <script src="./scripts/calendar.js"></script> 
+    <script src="./scripts/api-scripts.js"></script>   
+</body>
+</html>
