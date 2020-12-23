@@ -267,7 +267,7 @@ grid-template-columns:1fr 1fr;
     border:none;
     padding:10px 30px;
     cursor:pointer;
-    
+    outline:none;
 }
 
 .btn-common:hover{
@@ -645,8 +645,9 @@ td.disabled{
 }
 
 td.today{
-    background-color:#f0ebea;
-    border-radius: 50%;
+    /* background-color:#f0ebea;
+    border-radius: 50%; */
+    font-weight:bolder;
 }
 
 #prev, #next, #today{
