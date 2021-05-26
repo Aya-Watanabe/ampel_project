@@ -97,7 +97,7 @@ function setErrorFor (input, message) {
  function setSuccessFor (input) {
    const formItem = input.parentElement; 
   
-   formItem.className = "form-item success";  //add error class
+   formItem.className = "form-item success";  //add success class
   
   };
  
